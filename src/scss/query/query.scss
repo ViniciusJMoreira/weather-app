@@ -1,0 +1,129 @@
+// https://chaturbate.com/liass_molly/
+
+@media (max-width: 1020px) {
+  main {
+
+    .days-forecast {
+      position: relative;
+
+      i {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        font-size: 1.25rem;
+        background-color: #142751;
+        color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.378);
+        transition: transform 0.1s linear;
+      }
+
+      i:active{
+        transform: translateY(-50%) scale(0.85);
+      }
+
+      i:first-child{
+        transform: translateY(-50%) translateX(-50%);
+        left: 0;
+      }
+
+      i:last-child{
+        transform: translateY(-50%) translateX(30%);
+        right: 0;
+      }
+
+      .weather-cards {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 4) - 12px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: .9rem;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+
+        .card {
+          width: auto;
+          scroll-snap-align: start;
+        }
+
+        .no-transition {
+          scroll-behavior: auto;
+        }
+  
+        .dragging {
+          scroll-snap-type: none;
+          scroll-behavior: auto;
+        }
+  
+        .dragging .card {
+          cursor: grab;
+          user-select: none;
+        }
+      }
+
+      .weather-cards::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  header {
+    transition: all 5s;
+    .search-nav {
+      // align-items: center;
+      // justify-content: center;
+
+      .search-input {
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .search-button {
+        position: relative;
+        transform: translateX(0%) translateY(0%);
+        transition: transform 2s;
+      }
+    }
+  }
+  main {
+
+    .days-forecast {
+
+      .weather-cards {
+        grid-auto-columns: calc((100% / 3) - 12px);
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  main {
+
+    .days-forecast {
+
+      .weather-cards {
+        grid-auto-columns: calc((100% / 2) - 12px);
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+
+    .days-forecast {
+
+      .weather-cards {
+        grid-auto-columns: 100%;
+      }
+    }
+  }
+}

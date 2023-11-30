@@ -1,0 +1,152 @@
+* {
+  font-family: $Raleway;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+h1 {
+  margin-block: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #334467;
+}
+
+header {
+
+  .search-nav {
+    @include flex(flex, row, end, center, 1rem);
+    width: 100%;
+    height: 4.5rem;
+    background-color: #142751;
+    padding-inline: 1.2rem;
+
+
+    .search-input {
+      position: relative;
+      background-color: #334467;
+      border: none;
+      width: 300px;
+      height: 40px;
+      border-radius: 4px;
+      padding-inline-start: 1rem;
+      font-size: 1rem;
+    }
+
+    ::placeholder {
+      color: #fff;
+      opacity: .7;
+    }
+
+    input:focus {
+      border: none;
+      outline: none;
+    }
+
+    .search-button {
+      position: absolute;
+      background: none;
+      border: none;
+      transform: translateX(-100%) translateY(0%);
+    }
+    
+    :where(.search-icon, .location-icon, .star-icon) {
+      font-size: 1.1rem;
+      opacity: .7;
+    }
+
+    :where(.search-icon, .location-icon, .star-icon):hover {
+      opacity: 1;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  min-height: inherit;
+  @include flex(flex, column, space-around, center, 0);
+  padding: 0 35px;
+
+  .weather-data {
+    @include flex(flex, column, normal, normal, .4rem );
+    text-align: center;
+  }
+
+  .city-name {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+  }
+
+  .condition {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .weather-temp {
+    @include flex(flex, row, center, center, 1.4rem);
+
+    .actually-weather-image {
+      width: 60px;
+    }
+
+    .actually-temp {
+      font-size: 5rem;
+      font-weight: 100;
+    }
+  }
+
+  .condition-info {
+    @include flex(flex, row, space-between, center, .5rem);
+    div {
+      width: 60px;
+    }
+    .condition-image {
+      width: 25px;
+    }
+  }
+
+  .days-forecast {
+    width: 100%;
+    max-width: 900px;
+
+    i {
+      display: none;
+    }
+
+    .weather-cards {
+      @include flex(flex, row, space-between, normal, 0);
+      list-style-type: none;
+
+      .card {
+        @include flex(flex, column, space-between, center, 1.5rem);
+        width: 130px;
+        background-color: #142751;
+        text-align: center;
+        padding: .5rem;
+        border-radius: 8px;
+      }
+      :where(.week-day-title, .temp-week) {
+        font-size: 1.5rem;
+      }
+      .temp-week {
+        font-weight: 600;
+      }
+      .weather-image {
+        width: 50px;
+      }
+      .condition-week {
+        letter-spacing: .1rem;
+      }
+    }
+  }
+}

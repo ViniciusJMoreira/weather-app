@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App | ViniciusDev</title>
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="./src/css/style.css">
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <!-- JS Link -->
+  <script src="./src/js/index.js" type="module" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="search-nav">
+      <i class="fa-regular fa-star star-icon"></i>
+      <i class="fa-solid fa-location-arrow location-icon"></i>
+      <input type="text" id="search-input" placeholder="Search"
+      value="Rimini" class="search-input">
+      <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
+    </nav>
+  </header>
+  <main>
+    <section class="weather-data">
+      <h2 class="city-name"></h2>
+      <h4 class="condition"></h4>
+      <div class="weather-temp">
+        <img class="actually-weather-image" src="" alt="">
+        <h3 class="actually-temp"></h3>
+      </div>
+      <div class="condition-info">
+        <div>
+          <img class="condition-image" src="./image/Cloud.png" alt="">
+          <p class="cloud"></p>
+        </div>
+        <div>
+          <img class="condition-image" src="./image/Humidity.png" alt="">
+          <p class="humidity"></p>
+        </div>
+        <div>
+          <img class="condition-image" src="./image/Wind.png" alt="">
+          <p class="wind"></p>
+        </div>
+      </div>
+    </section>
+    <section class="days-forecast">
+      <i id="left" class="fa-solid fa-angle-left i"></i>
+      <ul class="weather-cards">
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right i"></i>
+    </section>
+  </main>
+</body>
+</html>

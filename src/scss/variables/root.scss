@@ -1,0 +1,14 @@
+// Import Google Font 'Raleway'
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600&display=swap');
+
+// Font
+$Raleway: 'Roboto';
+
+// Mixin display Flex
+@mixin flex($display, $flex-direction ,$justify-content, $align-items, $gap) {
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
