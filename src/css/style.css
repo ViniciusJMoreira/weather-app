@@ -42,6 +42,11 @@ header .search-nav .search-input {
   border-radius: 4px;
   padding-inline-start: 1rem;
   font-size: 1rem;
+  text-align: start;
+  /* Evita lo zoom mobile sull'input */
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+  user-zoom: none;
 }
 header .search-nav ::placeholder {
   color: #fff;
