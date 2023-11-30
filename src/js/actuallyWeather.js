@@ -9,7 +9,7 @@ export const setActuallyWeather = (weatherItem, name) => {
   actuallyTemp.textContent = `${Math.floor(weatherItem.main.temp - 273.15)}°`;
 
   const actuallyWeatherImage = document.querySelector(".actually-weather-image");
-  actuallyWeatherImage.src = `../../image/${weatherItem.weather[0].main}.png`;
+  actuallyWeatherImage.src = `./image/${weatherItem.weather[0].main}.png`;
 
   // Condition-Info
 
