@@ -17,6 +17,7 @@ const getWeatherDetails = (name, lat, lon) => {
       }
     });
 
+    document.querySelector(".weather-cards").innerHTML = '';
     searchInput.value = "";
     fiveDaysForecast.forEach((weatherItem, index) => {
       if(index === 0) setActuallyWeather(weatherItem, name);
@@ -56,6 +57,7 @@ const getUserCoordinates = () => {
       }).catch(() => {
         alert('An error occured while fetching the coordinates!');
       });
+
     },
     error => { // Show alert if user denied the location permission
       if(error.code === error.PERMISSION_DENIED) {
