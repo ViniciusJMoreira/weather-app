@@ -41,7 +41,7 @@ const createdCard = (weatherItem) => {
 
   const weatherImage = document.createElement('img');
   weatherImage.className = 'weather-image';
-  weatherImage.src = `../../image/${weatherItem.weather[0].main}.png`;
+  weatherImage.src = `./image/${weatherItem.weather[0].main}.png`;
   weatherImage.alt = weatherItem.weather[0].description;
 
   const conditionWeek = document.createElement('p');
