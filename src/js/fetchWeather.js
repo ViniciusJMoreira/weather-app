@@ -5,7 +5,7 @@ import { searchInput, searchButton } from "./index.js";
 const API_key = "3b23162ae4aa8318af8c3f9f09cc742e"; // API Keys for OpenWeatherMap
 
 const getWeatherDetails = (name, lat, lon) => {
-  const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_key}`;
+  const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_key}`;
   console.log('3')
   fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
     //Filter the forecast to get only one forecast per day
