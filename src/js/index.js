@@ -13,6 +13,7 @@ locationIcon.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 searchInput.addEventListener("keyup", e => e.key === 'Enter' && getCityCoordinates());
 window.addEventListener('DOMContentLoaded', getCityCoordinates);
+window.addEventListener('onload', getCityCoordinates);
 
 // Draggable Card
 
