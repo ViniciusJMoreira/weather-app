@@ -24,5 +24,11 @@ arrowIcons.forEach((icon) => {
 });
 
 weatherCards.addEventListener('mousedown', dragStart);
+weatherCards.addEventListener('touchstart', dragStart);
+
 weatherCards.addEventListener('mousemove', dragging);
-document.addEventListener('mouseup', dragStop);
+weatherCards.addEventListener('touchmove', dragging);
+
+weatherCards.addEventListener('mouseup', dragStop);
+weatherCards.addEventListener('touchend', dragStop);
+weatherCards.addEventListener('mouseleave', dragStop);
