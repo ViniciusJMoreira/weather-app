@@ -5,7 +5,9 @@ searchButton = document.querySelector(".search-button");
 const locationIcon = document.querySelector(".location-icon");
 
 
-
+searchInput.addEventListener('touchstart', function(event) {
+  event.preventDefault();
+});
 
 
 locationIcon.addEventListener("click", getUserCoordinates);

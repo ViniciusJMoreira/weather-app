@@ -44,7 +44,6 @@ header {
        /* Evita lo zoom mobile sull'input */
       touch-action: manipulation;
       -ms-touch-action: manipulation;
-      user-zoom: none;
     }
 
     ::placeholder {
