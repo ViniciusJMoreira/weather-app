@@ -53,7 +53,6 @@ header .search-nav .search-input {
   /* Evita lo zoom mobile sull'input */
   touch-action: manipulation;
   -ms-touch-action: manipulation;
-  user-zoom: none;
 }
 header .search-nav ::placeholder {
   color: #fff;
@@ -215,9 +214,6 @@ main .days-forecast .weather-cards .condition-week {
   main .days-forecast .weather-cards .card {
     width: auto;
     scroll-snap-align: start;
-  }
-  main .days-forecast .weather-cards .no-transition {
-    scroll-behavior: auto;
   }
   main .days-forecast .weather-cards .dragging {
     scroll-snap-type: none;

@@ -5,7 +5,6 @@ export { firstCardWidth }
 
 let firstCardWidth;
 const searchInput = document.querySelector('.search-input');
-const weatherCards = document.querySelector('weather-cards')
 const API_key = "3b23162ae4aa8318af8c3f9f09cc742e"; // API Keys for OpenWeatherMap
 
 const getWeatherDetails = (name, lat, lon) => {
