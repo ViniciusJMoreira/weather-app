@@ -22,7 +22,7 @@ body {
   background-color: #334467;
 }
 
-header .search-nav {
+header {
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -33,8 +33,15 @@ header .search-nav {
   background-color: #142751;
   padding-inline: 1.2rem;
 }
-header .search-nav .search-input {
+header .search-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   position: relative;
+}
+header .search-nav .search-input {
   background-color: #334467;
   border: none;
   width: 300px;
@@ -60,7 +67,8 @@ header .search-nav .search-button {
   position: absolute;
   background: none;
   border: none;
-  transform: translateX(-100%) translateY(0%);
+  right: 5%;
+  top: 30%;
 }
 header .search-nav :where(.search-icon, .location-icon, .star-icon) {
   font-size: 1.1rem;
@@ -224,6 +232,10 @@ main .days-forecast .weather-cards .condition-week {
   }
 }
 @media (max-width: 680px) {
+  header {
+    align-items: center;
+    justify-content: center;
+  }
   main .days-forecast .weather-cards {
     grid-auto-columns: calc(33.3333333333% - 12px);
   }
@@ -231,6 +243,11 @@ main .days-forecast .weather-cards .condition-week {
 @media (max-width: 450px) {
   main .days-forecast .weather-cards {
     grid-auto-columns: calc(50% - 12px);
+  }
+}
+@media (max-width: 380px) {
+  header .search-nav {
+    width: 100%;
   }
 }
 @media (max-width: 320px) {

@@ -73,11 +73,8 @@
 
 @media (max-width: 680px) {
   header {
-
-    .search-nav {
-      // align-items: center;
-      // justify-content: center;
-    }
+    align-items: center;
+    justify-content: center;
   }
   main {
 
@@ -91,6 +88,8 @@
 }
 
 @media (max-width: 450px) {
+  
+  
   main {
 
     .days-forecast {
@@ -98,6 +97,15 @@
       .weather-cards {
         grid-auto-columns: calc((100% / 2) - 12px);
       }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  header {
+
+    .search-nav {
+        width: 100%;
     }
   }
 }
