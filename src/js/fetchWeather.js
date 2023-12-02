@@ -1,12 +1,16 @@
-import { setWeekCard } from "./weekCard.js";
+import { createdCard } from "./weekCard.js";
 import { setActuallyWeather } from "./actuallyWeather.js";
-import { searchInput, searchButton } from "./index.js";
+export { firstCardWidth }
 
+
+let firstCardWidth;
+const searchInput = document.querySelector('.search-input');
+const weatherCards = document.querySelector('weather-cards')
 const API_key = "3b23162ae4aa8318af8c3f9f09cc742e"; // API Keys for OpenWeatherMap
 
 const getWeatherDetails = (name, lat, lon) => {
   const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_key}`;
-  console.log('3')
+
   fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
     //Filter the forecast to get only one forecast per day
     const uniqueForecastDays = [];
@@ -16,13 +20,13 @@ const getWeatherDetails = (name, lat, lon) => {
         return uniqueForecastDays.push(forecastDate);
       }
     });
-    console.log('4')
     document.querySelector(".weather-cards").innerHTML = '';
     searchInput.value = "";
     fiveDaysForecast.forEach((weatherItem, index) => {
       if(index === 0) setActuallyWeather(weatherItem, name);
-      else setWeekCard(weatherItem);
+      else createdCard(weatherItem);
     });
+    firstCardWidth = document.querySelector('.card').offsetWidth + 12;
   }).catch(() => {
     alert("An error occurred while fetching the weather forecast!");
   })
@@ -33,12 +37,10 @@ const getCityCoordinates = () => {
   if(!cityName) return; // Return if cityName is empty
   const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_key}`;
 
-  console.log('1')
   // Get entered city coordinates (latitude, longitude and name) from the api response
   fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
     if(!data.length) return alert(`No coordinates found for ${cityName}`);
     const { name, lat, lon } = data[0];
-    console.log('2')
     getWeatherDetails(name, lat, lon);
   }).catch(() => {
     alert('An error occured while fetching the coordinates!');

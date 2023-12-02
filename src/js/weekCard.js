@@ -29,7 +29,7 @@ const setWeekDay = (weatherItem) => {
 }
 
 
-const createdCard = (weatherItem) => {
+export const createdCard = (weatherItem) => {
   const weatherCards = document.querySelector(".weather-cards");
 
   const contentCard = document.createElement('li');
@@ -55,8 +55,4 @@ const createdCard = (weatherItem) => {
   contentCard.append(weekDayTitle, weatherImage, conditionWeek, tempWeek);
 
   weatherCards.append(contentCard)
-}
-
-export const setWeekCard = (weatherItem) => {
-  createdCard(weatherItem);
 }

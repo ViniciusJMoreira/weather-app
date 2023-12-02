@@ -48,10 +48,6 @@
           width: auto;
           scroll-snap-align: start;
         }
-
-        .no-transition {
-          scroll-behavior: auto;
-        }
   
         .dragging {
           scroll-snap-type: none;
