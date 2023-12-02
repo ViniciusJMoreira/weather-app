@@ -68,13 +68,4 @@ const getUserCoordinates = () => {
   );
 }
 
-const animationInput = () => {
-  if(window.innerWidth < 680) {
-    searchInput.style.position = 'relative';
-    searchInput.style.transform = 'scaleX(1)';
-    searchButton.style.position = 'absolute';
-    searchButton.style.transform = 'translate(-100%, 0%)';
-  }
-}
-
-export { getCityCoordinates, getUserCoordinates, animationInput }
+export { getCityCoordinates, getUserCoordinates }
