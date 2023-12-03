@@ -42,8 +42,8 @@ header {
       font-size: 1rem;
       text-align: start;
        /* Evita lo zoom mobile sull'input */
-      touch-action: manipulation;
-      -ms-touch-action: manipulation;
+      touch-action: none;
+      -ms-touch-action: none;
     }
 
     ::placeholder {
