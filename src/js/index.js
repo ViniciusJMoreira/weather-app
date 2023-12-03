@@ -6,6 +6,7 @@ const searchButton = document.querySelector(".search-button");
 const locationIcon = document.querySelector(".location-icon");
 const weatherCards = document.querySelector(".weather-cards");
 const arrowIcons = document.querySelectorAll(".i");
+const iconsNav = document.querySelectorAll(".icon-nav");
 
 // Weather Api
 
@@ -33,3 +34,11 @@ weatherCards.addEventListener('touchmove', dragging);
 weatherCards.addEventListener('mouseup', dragStop);
 weatherCards.addEventListener('touchend', dragStop);
 weatherCards.addEventListener('mouseleave', dragStop);
+
+// Hover Elements
+
+iconsNav.forEach((icon) => {
+    icon.addEventListener('touchend', () =>  {
+      icon.style.opacity = '.7'
+    })
+})
