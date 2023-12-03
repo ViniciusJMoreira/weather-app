@@ -38,7 +38,10 @@ weatherCards.addEventListener('mouseleave', dragStop);
 // Hover Elements
 
 iconsNav.forEach((icon) => {
-    icon.addEventListener('touchend', () =>  {
-      icon.style.opacity = '.6'
-    })
+  icon.addEventListener('touchstart', () =>  {
+    icon.style.opacity = '1'
+  })
+  icon.addEventListener('touchend', () =>  {
+    icon.style.opacity = '.6'
+  })
 })
