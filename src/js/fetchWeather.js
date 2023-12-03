@@ -35,6 +35,7 @@ const getCityCoordinates = () => {
   if(!cityName) return; // Return if cityName is empty
   const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_key}`;
 
+  searchInput.value = ''
   // Get entered city coordinates (latitude, longitude and name) from the api response
   fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
     if(!data.length) return alert(`No coordinates found for ${cityName}`);
