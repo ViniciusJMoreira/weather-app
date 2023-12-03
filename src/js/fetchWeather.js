@@ -35,7 +35,7 @@ const getCityCoordinates = () => {
   if(!cityName) return; // Return if cityName is empty
   const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_key}`;
 
-  searchInput.value = ''
+  searchInput.value = '';
   // Get entered city coordinates (latitude, longitude and name) from the api response
   fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
     if(!data.length) return alert(`No coordinates found for ${cityName}`);
@@ -47,9 +47,9 @@ const getCityCoordinates = () => {
 }
 
 const riminiCityCoordinates = () => {
-  const cityName = 'Rimini'
-  const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_key}`;
+  const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=Rimini&limit=1&appid=${API_key}`;
 
+  searchInput.value = '';
   fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
     const { name, lat, lon } = data[0];
     getWeatherDetails(name, lat, lon);
