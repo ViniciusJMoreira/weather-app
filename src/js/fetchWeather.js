@@ -20,7 +20,6 @@ const getWeatherDetails = (name, lat, lon) => {
       }
     });
     document.querySelector(".weather-cards").innerHTML = '';
-    searchInput.value = "";
     fiveDaysForecast.forEach((weatherItem, index) => {
       if(index === 0) setActuallyWeather(weatherItem, name);
       else createdCard(weatherItem);
