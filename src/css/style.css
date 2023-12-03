@@ -56,7 +56,7 @@ header .search-nav .search-input {
 }
 header .search-nav ::placeholder {
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 header .search-nav input:focus {
   border: none;
@@ -71,7 +71,8 @@ header .search-nav .search-button {
 }
 header .search-nav :where(.search-icon, .location-icon, .star-icon) {
   font-size: 1.1rem;
-  opacity: 0.7;
+  opacity: 0.6;
+  transition: all 1s;
 }
 header .search-nav :where(.search-icon, .location-icon, .star-icon):hover {
   opacity: 1;
