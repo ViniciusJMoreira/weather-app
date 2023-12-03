@@ -46,6 +46,18 @@ const getCityCoordinates = () => {
   });
 }
 
+const riminiCityCoordinates = () => {
+  const cityName = 'Rimini'
+  const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_key}`;
+
+  fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
+    const { name, lat, lon } = data[0];
+    getWeatherDetails(name, lat, lon);
+  }).catch(() => {
+    alert('An error occured while fetching the coordinates!');
+  });
+}
+
 const getUserCoordinates = () => {
   navigator.geolocation.getCurrentPosition(
     position => {
@@ -69,4 +81,4 @@ const getUserCoordinates = () => {
   );
 }
 
-export { getCityCoordinates, getUserCoordinates }
+export { getCityCoordinates, getUserCoordinates, riminiCityCoordinates }

@@ -1,4 +1,4 @@
-import { firstCardWidth, getCityCoordinates, getUserCoordinates } from "./fetchWeather.js";
+import { firstCardWidth, getCityCoordinates, riminiCityCoordinates, getUserCoordinates } from "./fetchWeather.js";
 import { dragStart, dragStop, dragging, showHideIcons } from "./draggableCard.js";
 
 const searchInput = document.querySelector(".search-input");
@@ -14,7 +14,7 @@ locationIcon.addEventListener("click", getUserCoordinates);
 searchButton.addEventListener("click", getCityCoordinates);
 searchInput.addEventListener("keyup", e => e.key === 'Enter' && getCityCoordinates());
 window.addEventListener('DOMContentLoaded', getCityCoordinates);
-window.addEventListener('onload', getCityCoordinates);
+window.addEventListener('DOMContentLoaded', riminiCityCoordinates);
 
 // Draggable Card
 
