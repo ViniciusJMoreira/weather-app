@@ -42,6 +42,6 @@ iconsNav.forEach((icon) => {
     icon.style.opacity = '1'
   })
   icon.addEventListener('touchend', () =>  {
-    icon.style.opacity = '.6'
+    setInterval(() => {icon.style.opacity = '.6'}, 2000)
   })
 })
