@@ -1,5 +1,6 @@
 import { firstCardWidth, getCityCoordinates, riminiCityCoordinates, getUserCoordinates } from "./fetchWeather.js";
 import { dragStart, dragStop, dragging, showHideIcons } from "./draggableCard.js";
+import '../css/style.css'
 
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.querySelector(".search-button");
